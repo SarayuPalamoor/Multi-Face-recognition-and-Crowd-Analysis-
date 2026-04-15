@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Recognition Result</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1D2635; /* Dark Navy Blue background */
+            color: #fff; /* White text for good contrast */
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            color: #E0F7FF; /* Light blue text color */
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .person-card {
+            background-color: #2A374A; /* Slightly lighter navy blue */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            width: 300px; /* Fixed width for uniformity */
+            text-align: left;
+        }
+        .person-card h3 {
+            color: #4A90E2; /* Light blue color for headings */
+            margin-bottom: 10px;
+        }
+        .person-card p {
+            margin: 5px 0;
+            font-size: 1.1em;
+            line-height: 1.5;
+        }
+        .person-card p strong {
+            color: #E0F7FF; /* Light blue for labels */
+        }
+        .output-image {
+            display: block;
+            margin: 0 auto 20px;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        a {
+            display: block;
+            text-align: center;
+            margin: 20px auto;
+            text-decoration: none;
+            color: white;
+            background-color: #4A90E2;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            max-width: 200px;
+        }
+        a:hover {
+            background-color: #357ABD; /* Darker blue when hovered */
+        }
+    </style>
+</head>
+<body>
+    <h1>Face Recognition Result</h1>
+    <img src="{{ image_url }}" alt="Processed Image" class="output-image" />
+    <div class="container">
+        {% for person in recognized_details %}
+        <div class="person-card">
+            <h3>Person Details</h3>
+            <p><strong>Roll Number:</strong> {{ person.rollNo }}</p>
+            <p><strong>Name:</strong> {{ person.name }}</p>
+            <p><strong>Father's Name:</strong> {{ person.fatherName }}</p>
+            <p><strong>Department:</strong> {{ person.department }}</p>
+            <p><strong>Contact:</strong> {{ person.contact }}</p>
+            <p><strong>Images Count:</strong> {{ person.images_count }}</p>
+        </div>
+        {% endfor %}
+    </div>
+    <a href="/">Upload Another Image</a>
+</body>
+</html>

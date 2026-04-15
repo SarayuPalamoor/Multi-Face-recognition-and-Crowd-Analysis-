@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOLO Image Upload</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1D2635; /* Dark Navy Blue */
+            color: #fff; /* White text color for better contrast */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+        }
+        h1 {
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            color: #E0F7FF; /* Light blue text color */
+        }
+        form {
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #2A374A; /* Slightly lighter navy blue */
+            max-width: 400px;
+            width: 100%; /* Ensure the form takes full available width */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            margin: 0 auto; /* Ensures the form is horizontally centered */
+        }
+        .file-upload {
+            display: flex;
+            justify-content: center;
+            margin: 10px 0 20px 0;
+        }
+        .file-upload input[type="file"] {
+            font-size: 16px;
+            padding: 10px;
+            border: 1px solid #4A90E2;
+            border-radius: 4px;
+            background-color: #fff;
+            color: #333;
+            display: none; /* Hide the default file input */
+        }
+        .file-upload label {
+            background-color: #4A90E2; /* Light blue background */
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .file-upload label:hover {
+            background-color: #357ABD; /* Darker blue on hover */
+        }
+        button {
+            background-color: #4A90E2; /* Light blue button */
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%; /* Make the button full-width */
+        }
+        button:hover {
+            background-color: #357ABD; /* Darker blue when hovered */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Upload Image for YOLO Detection</h1>
+        <form action="/predict" method="post" enctype="multipart/form-data">
+            <div class="file-upload">
+                <input type="file" name="image" accept="image/*" id="file" required />
+                <label for="file">Choose File</label>
+            </div>
+            <button type="submit">Upload and Detect</button>
+        </form>
+    </div>
+</body>
+</html>
+

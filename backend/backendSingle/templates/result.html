@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparison Result</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Face Comparison Result</h1>
+        <div class="image-container">
+            <div>
+                <h3>Image 1</h3>
+                <img src="{{ image1_url }}" alt="Image 1">
+            </div>
+            <div>
+                <h3>Image 2</h3>
+                <img src="{{ image2_url }}" alt="Image 2">
+            </div>
+        </div>
+        <h2>Similarity Score: {{ similarity_score }}</h2>
+        <h2>{{ result_label }}</h2>
+        <a href="/">Go Back</a>
+    </div>
+</body>
+</html>

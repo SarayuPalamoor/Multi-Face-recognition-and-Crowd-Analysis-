@@ -1,0 +1,8 @@
+backend :
+/backend -> python a.python
+/backendmulti -> python face_recognition_and_attendence.py 
+/backendSingle -> python model.py
+/backSingle -> python match.py
+/server -> node server.js (login and train uploaded images)
+frontend: 
+    npm run dev

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Comparison - Home</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Face Comparison App</h1>
+        <form id="uploadForm" enctype="multipart/form-data" method="post" action="/compare">
+            <label for="image1">Upload Image 1:</label>
+            <input type="file" id="image1" name="image1" accept="image/*" required>
+            <br><br>
+            <label for="image2">Upload Image 2:</label>
+            <input type="file" id="image2" name="image2" accept="image/*" required>
+            <br><br>
+            <button type="submit">Compare Faces</button>
+        </form>
+    </div>
+</body>
+</html>

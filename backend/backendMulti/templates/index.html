@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Recognition Upload</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1D2635; /* Dark Navy Blue background */
+            color: #fff; /* White text for good contrast */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+        }
+        h1 {
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            color: #E0F7FF; /* Light blue text color */
+        }
+        form {
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #2A374A; /* Slightly lighter navy blue */
+            max-width: 400px;
+            width: 100%; /* Ensures form takes full available width */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            margin: 0 auto;
+        }
+        label {
+            font-size: 1.2em;
+            color: #E0F7FF; /* Light blue color for label */
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+        input[type="file"] {
+            font-size: 16px;
+            padding: 10px;
+            border: 1px solid #4A90E2;
+            border-radius: 4px;
+            background-color: #fff;
+            color: #333;
+            width: 100%;
+            margin: 10px 0 20px 0;
+        }
+        button {
+            background-color: #4A90E2; /* Light blue button */
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            cursor: pointer;
+            width: 100%; /* Make button full width */
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #357ABD; /* Darker blue on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>Face Recognition System</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <label for="image">Upload an Image:</label>
+        <input type="file" name="image" id="image" accept="image/*" required>
+        <button type="submit">Upload</button>
+    </form>
+</body>
+</html>
