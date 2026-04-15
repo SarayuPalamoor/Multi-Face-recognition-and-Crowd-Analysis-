@@ -1,0 +1,26 @@
+# Core ML / AI
+tensorflow==2.18.0
+keras-facenet==0.3.2
+facenet-pytorch==2.6.0
+mtcnn==0.1.1
+scikit-learn==1.5.2
+torch==2.2.0
+torchvision==0.17.2
+ultralytics==8.3.29
+
+# Computer Vision
+opencv-python==4.10.0.84
+Pillow==11.2.1
+numpy==1.26.0
+matplotlib==3.9.2
+
+# Web framework
+Flask==3.1.0
+Flask-Cors==5.0.0
+
+# Database
+pymongo==4.10.1
+
+# Utilities
+gdown==5.2.0
+python-dotenv==1.1.0
